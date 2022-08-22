@@ -24,6 +24,8 @@ public class HelloController {
     @RequestMapping(value = "/student/submit")
     public String giveMeFeedbackAboutGrage(@RequestBody StudentData studentData){
         return "You grade  is " + studentData.getGrade();
+
+
     }
 
 }
