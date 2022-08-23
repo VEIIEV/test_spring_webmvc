@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration >
+
+<property name="LOG_PATH" value="logs"/>
+
+<!--мы определили ConsoleAppender с именем STDOUT что бы использовать pattern layout
+  заментка что мы неявно указываем шаблон, а вместо этого полагаемся на дефолтный logback value который использует pattern layout-->
+
+<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+        <!--Форматируем сообщения лога -->
+        <pattern>%d{HH:mm:ss.SSS} %-5level %green(%L) [%thread] %logger{36} - %msg%n</pattern>
+    </encoder>
+</appender>
+
+
+<appender name="FILE-AUDIT" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>${LOG_PATH}/debug.log</file>
+    <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+        <pattern>%d{HH:mm:ss.SSS} %-5level %green(%L) [%thread] %logger{36} - %msg%n</pattern>
+    </encoder>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+        <!-- rollover daily -->
+        <fileNamePattern>${LOG_PATH}/archived/debug.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+        <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+            <maxFileSize>10MB</maxFileSize>
+        </timeBasedFileNamingAndTriggeringPolicy>
+    </rollingPolicy>
+</appender>
+
+<root level="ALL">
+    <appender-ref ref="STDOUT"/>
+    <appender-ref ref="FILE-AUDIT"/>
+</root>
+<!--С помощью тега root мы подключаем описанные аппендеры (можно не все, если их объявлено несколько, но не все нужны) и уровень логирования. -->
+</configuration>

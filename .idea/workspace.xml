@@ -9,15 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80c5fae7-41e2-4c9e-a14c-5418f1686ab6" name="Changes" comment="веб приложение запускающиеся через Spring-boot, с контролером и файлом dto для послед серилизации">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/skillfactory/controllers/JsonROFLController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/skillfactory/dto/UserData.java" afterDir="false" />
+    <list default="true" id="80c5fae7-41e2-4c9e-a14c-5418f1686ab6" name="Changes" comment="добавил логирование через logback  &lt;rollingpolicy&gt; не работает, хз шо не так">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/skillfactory/filters/LoggingFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/stash/loggs/log.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/skillfactory/controllers/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/skillfactory/controllers/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/skillfactory/dto/StudentData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/skillfactory/dto/StudentData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/skillfactory/BlogApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/skillfactory/BlogApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,26 +55,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;980e343f8e179b9557d64b921cea727a&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/world/IdeaProjects/SF_31_2_Spirng_webApp/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "spring.configuration.checksum": "980e343f8e179b9557d64b921cea727a"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\world\IdeaProjects\SF_31_2_Spirng_webApp\src\main\resources" />
+    </key>
+  </component>
   <component name="RunManager" selected="Spring Boot.BlogApplication">
     <configuration name="rest-api | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
@@ -229,7 +236,7 @@
       <workItem from="1661131876506" duration="118000" />
       <workItem from="1661132480293" duration="6342000" />
       <workItem from="1661161018458" duration="2092000" />
-      <workItem from="1661200902354" duration="4905000" />
+      <workItem from="1661200902354" duration="19463000" />
     </task>
     <task id="LOCAL-00001" summary="веб приложение запускающиеся через Spring-boot, с контролером и файлом dto для послед серилизации">
       <created>1661137844079</created>
@@ -245,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661137957289</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="добавил класс контроллер, и класс модель, посмотрел на возможности faserxml.jackson, реализовал запись полученной в зопросе информации в файл с обработкой исключений">
+      <created>1661205853514</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1661205853514</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,7 +278,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="веб приложение запускающиеся через Spring-boot, с контролером и файлом dto для послед серилизации" />
-    <option name="LAST_COMMIT_MESSAGE" value="веб приложение запускающиеся через Spring-boot, с контролером и файлом dto для послед серилизации" />
+    <MESSAGE value="добавил класс контроллер, и класс модель, посмотрел на возможности faserxml.jackson, реализовал запись полученной в зопросе информации в файл с обработкой исключений" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил класс контроллер, и класс модель, посмотрел на возможности faserxml.jackson, реализовал запись полученной в зопросе информации в файл с обработкой исключений" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

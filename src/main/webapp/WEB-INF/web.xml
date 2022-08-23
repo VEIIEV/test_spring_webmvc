@@ -29,4 +29,15 @@
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
+  
+
+  <filter>
+    <filter-name>LoggingFilter</filter-name>
+    <filter-class>ru.skillfactory.filters.LoggingFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>LoggingFilter</filter-name>
+    <url-pattern>/json/postmethod</url-pattern>
+  </filter-mapping>
 </web-app>
