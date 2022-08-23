@@ -9,16 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80c5fae7-41e2-4c9e-a14c-5418f1686ab6" name="Changes" comment="добавил логирование через logback  &lt;rollingpolicy&gt; не работает, хз шо не так">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/skillfactory/filters/LoggingFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/stash/loggs/log.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="80c5fae7-41e2-4c9e-a14c-5418f1686ab6" name="Changes" comment="добавил логирование через logback, почему-то ему нужен для работы logback.xml но не зависимо от того что я в него записываю, он меня  игнорирует, файл создался но запись в него не ведётся, паттерн не рабоает и вообще всё всё бесит&#10;ах да создал свой фильтр в котором логирую, а также в мейне его подключил на урл /json/postmethod">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/skillfactory/BlogApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/skillfactory/BlogApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +229,7 @@
       <workItem from="1661131876506" duration="118000" />
       <workItem from="1661132480293" duration="6342000" />
       <workItem from="1661161018458" duration="2092000" />
-      <workItem from="1661200902354" duration="19463000" />
+      <workItem from="1661200902354" duration="20723000" />
     </task>
     <task id="LOCAL-00001" summary="веб приложение запускающиеся через Spring-boot, с контролером и файлом dto для послед серилизации">
       <created>1661137844079</created>
@@ -259,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661205853514</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="добавил логирование через logback, почему-то ему нужен для работы logback.xml но не зависимо от того что я в него записываю, он меня  игнорирует, файл создался но запись в него не ведётся, паттерн не рабоает и вообще всё всё бесит&#10;ах да создал свой фильтр в котором логирую, а также в мейне его подключил на урл /json/postmethod">
+      <created>1661290700523</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1661290700523</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,7 +279,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="веб приложение запускающиеся через Spring-boot, с контролером и файлом dto для послед серилизации" />
     <MESSAGE value="добавил класс контроллер, и класс модель, посмотрел на возможности faserxml.jackson, реализовал запись полученной в зопросе информации в файл с обработкой исключений" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил класс контроллер, и класс модель, посмотрел на возможности faserxml.jackson, реализовал запись полученной в зопросе информации в файл с обработкой исключений" />
+    <MESSAGE value="добавил логирование через logback, почему-то ему нужен для работы logback.xml но не зависимо от того что я в него записываю, он меня  игнорирует, файл создался но запись в него не ведётся, паттерн не рабоает и вообще всё всё бесит&#10;ах да создал свой фильтр в котором логирую, а также в мейне его подключил на урл /json/postmethod" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил логирование через logback, почему-то ему нужен для работы logback.xml но не зависимо от того что я в него записываю, он меня  игнорирует, файл создался но запись в него не ведётся, паттерн не рабоает и вообще всё всё бесит&#10;ах да создал свой фильтр в котором логирую, а также в мейне его подключил на урл /json/postmethod" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
