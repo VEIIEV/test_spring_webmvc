@@ -2,9 +2,11 @@ package ru.skillfactory;
 
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
+import ru.skillfactory.dto.TakenData;
 import ru.skillfactory.filters.LoggingFilter;
 
 import javax.servlet.FilterRegistration;
@@ -12,14 +14,17 @@ import javax.servlet.FilterRegistration;
 @SpringBootApplication
 public class BlogApplication {
 
+
+
     public static void main(String[] args) {
-        SpringApplication.run(BlogApplication.class, args);}
+        SpringApplication.run(BlogApplication.class, args);
+    }
 
     //регистрация бина
     @Bean
-    FilterRegistrationBean<LoggingFilter> loggingFilterFilterRegistrationBean(){
+    FilterRegistrationBean<LoggingFilter> loggingFilterFilterRegistrationBean() {
         //создаём обехкт регистрации
-        final FilterRegistrationBean<LoggingFilter>  filterRegistrationBean= new FilterRegistrationBean<>();
+        final FilterRegistrationBean<LoggingFilter> filterRegistrationBean = new FilterRegistrationBean<>();
 
         //кладём в неё фильтр
         filterRegistrationBean.setFilter(new LoggingFilter());
@@ -29,4 +34,13 @@ public class BlogApplication {
 
         return filterRegistrationBean;
     }
+
+    @Bean
+    public TakenData takenDataBean() {
+        TakenData takenData = new TakenData();
+        takenData.setData("nothing");
+        return takenData;
+    }
+
+
 }

@@ -1,12 +1,14 @@
 package ru.skillfactory.controllers;
 
 
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import ru.skillfactory.dto.StudentData;
 
 @RestController
 // @Controller
+@EnableAutoConfiguration
 @RequestMapping("/hello")
 public class HelloController {
 
