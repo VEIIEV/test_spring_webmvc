@@ -9,14 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80c5fae7-41e2-4c9e-a14c-5418f1686ab6" name="Changes" comment="убрал лишнее зависимости, все заработало, в Spring-boot как оказалось уже есть всё для работы logback, чётко заебись">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/skillfactory/controllers/SaveDataController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/skillfactory/dto/TakenData.java" afterDir="false" />
+    <list default="true" id="80c5fae7-41e2-4c9e-a14c-5418f1686ab6" name="Changes" comment="посмотрел на возможности создания бинов, узнал что в @&#10;@SpringBootApplication входит несколько других аннотаций таких как @ComponentScan и @EnableAutoConfiguration, создал контроллеры для записи информации в синглтон-бин через запрос и для его отображения, и создал его собсна конфигурацию">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/skillfactory/BlogApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/skillfactory/BlogApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/skillfactory/controllers/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/skillfactory/controllers/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stash/loggs/log.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/skillfactory/dto/StudentData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/skillfactory/dto/StudentData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/appconfig-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/appconfig-mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +236,8 @@
       <workItem from="1661132480293" duration="6342000" />
       <workItem from="1661161018458" duration="2092000" />
       <workItem from="1661200902354" duration="22228000" />
-      <workItem from="1661372799070" duration="5329000" />
+      <workItem from="1661372799070" duration="5744000" />
+      <workItem from="1661381744454" duration="2700000" />
     </task>
     <task id="LOCAL-00001" summary="веб приложение запускающиеся через Spring-boot, с контролером и файлом dto для послед серилизации">
       <created>1661137844079</created>
@@ -272,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661292258676</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="посмотрел на возможности создания бинов, узнал что в @&#10;@SpringBootApplication входит несколько других аннотаций таких как @ComponentScan и @EnableAutoConfiguration, создал контроллеры для записи информации в синглтон-бин через запрос и для его отображения, и создал его собсна конфигурацию">
+      <created>1661378762421</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1661378762421</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,7 +303,8 @@
     <MESSAGE value="добавил класс контроллер, и класс модель, посмотрел на возможности faserxml.jackson, реализовал запись полученной в зопросе информации в файл с обработкой исключений" />
     <MESSAGE value="добавил логирование через logback, почему-то ему нужен для работы logback.xml но не зависимо от того что я в него записываю, он меня  игнорирует, файл создался но запись в него не ведётся, паттерн не рабоает и вообще всё всё бесит&#10;ах да создал свой фильтр в котором логирую, а также в мейне его подключил на урл /json/postmethod" />
     <MESSAGE value="убрал лишнее зависимости, все заработало, в Spring-boot как оказалось уже есть всё для работы logback, чётко заебись" />
-    <option name="LAST_COMMIT_MESSAGE" value="убрал лишнее зависимости, все заработало, в Spring-boot как оказалось уже есть всё для работы logback, чётко заебись" />
+    <MESSAGE value="посмотрел на возможности создания бинов, узнал что в @&#10;@SpringBootApplication входит несколько других аннотаций таких как @ComponentScan и @EnableAutoConfiguration, создал контроллеры для записи информации в синглтон-бин через запрос и для его отображения, и создал его собсна конфигурацию" />
+    <option name="LAST_COMMIT_MESSAGE" value="посмотрел на возможности создания бинов, узнал что в @&#10;@SpringBootApplication входит несколько других аннотаций таких как @ComponentScan и @EnableAutoConfiguration, создал контроллеры для записи информации в синглтон-бин через запрос и для его отображения, и создал его собсна конфигурацию" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

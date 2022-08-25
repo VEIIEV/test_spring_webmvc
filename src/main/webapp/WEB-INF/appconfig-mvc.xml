@@ -17,4 +17,8 @@
             <value>.jsp</value>
         </property>
     </bean>
+
+    <bean id= "swaggerConfig" class="springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration">
+    <mvc:default-servlet-handler/>
+    </bean>
 </beans>
